@@ -1,0 +1,16 @@
+﻿@model MVCExample.Models.FormViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Hello @Model.Name</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(Model => Model.Name)
+        @Html.TextBoxFor(Model => Model.Name)
+    </div>
+
+    <input type="submit" value="Change Name" />
+}
